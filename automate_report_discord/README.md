@@ -9,6 +9,6 @@ Dataset :
 https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales. 
 
 ## Expected Output
-![Getting Started](images/output1.png)
-![Getting Started](images/output2.png)
+![Getting Started](images/output3.png)
+![Getting Started](images/output4.png)
 
