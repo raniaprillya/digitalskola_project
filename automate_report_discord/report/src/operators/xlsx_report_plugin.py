@@ -42,7 +42,7 @@ class ExcelReportPlugin():
 
 
     def transform(self, df:pd.DataFrame) -> pd.DataFrame:
-        df_transform = df.pivot_table(index='Gender', 
+        df_transform = df.pivot_table(index=['Gender','Date'],
                                     columns='Product line', 
                                     values='Total', 
                                     aggfunc='sum').round()
@@ -69,7 +69,7 @@ class ExcelReportPlugin():
         barchart = BarChart()
 
         data = Reference(workbook, 
-                        min_col=min_column+1,
+                        min_col=min_column+2,
                         max_col=max_column,
                         min_row=min_row,
                         max_row=max_row
@@ -77,7 +77,7 @@ class ExcelReportPlugin():
 
         categories = Reference(workbook,
                                 min_col=min_column,
-                                max_col=min_column,
+                                max_col=min_column+1,
                                 min_row=min_row+1,
                                 max_row=max_row
                                 )
@@ -86,7 +86,7 @@ class ExcelReportPlugin():
         barchart.set_categories(categories)
 
 
-        workbook.add_chart(barchart, 'B12')
+        workbook.add_chart(barchart, 'J5')
         barchart.title = 'Sales berdasarkan Produk'
         barchart.style = 2
 
