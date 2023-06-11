@@ -1,0 +1,1 @@
+This script is for import data from local (CSV) to postgreSQL
