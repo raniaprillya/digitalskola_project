@@ -1,0 +1,19 @@
+{
+    "marketplace_prod" : {
+        "host": "103.150.197.96",
+        "db": "project_4",
+        "user": "postgres",
+        "password": "dsbatch13!",
+        "port": 5431
+    },
+    "dwh": {
+        "host": "103.150.197.96",
+        "db": "dwh_project_4",
+        "user": "postgres",
+        "password": "dsbatch13!",
+        "port": 5431
+    },
+    "hadoop": {
+        "client": "http://hadoop-server:9870"
+    }
+}
